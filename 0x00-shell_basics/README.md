@@ -86,9 +86,29 @@ The most important thing to remember is that each line in the file specifies a t
 
 Here’s an example (actually this is the JPEG 2000 magic that is currently used in File 5.11):
 
-offset type 	test 	message
-0	string 	bonjour politesse
+offset type 	  test 	   message
 
-A [follow this link for more info](https://openpreservation.org/blogs/magic-editing-and-creation-primer/ "Title").
+0	     string 	bonjour  politesse
 
-A [pdf](https://drive.google.com/file/d/1Auz54eSR4KYwLF-ct8wAhg13VXZqvd_U/view?usp=sharing "Title"). 
+### How to create a .mgc file
+1- create a file school
+  ```
+  0	 string 	bonjour  politesse
+  ```
+
+2- put the example above inside the file school
+
+3- compile it to generate the .mgc file by using the following command:
+  ```
+  file -C -m school
+  ```
+  It will compile and generate a file called school.mgc
+  
+4- test it
+   ```
+   file -i -m school.mgc *
+   ```
+
+  [follow this link for more info](https://openpreservation.org/blogs/magic-editing-and-creation-primer/ "Title").
+
+  [pdf](https://drive.google.com/file/d/1Auz54eSR4KYwLF-ct8wAhg13VXZqvd_U/view?usp=sharing "Title"). 
